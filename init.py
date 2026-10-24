@@ -1,6 +1,6 @@
 
 # Define a Class
-class Employee():
+class Employee:
     # Class Variable
     Company_name="Google"
     def __init__(self,id,name):
