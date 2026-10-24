@@ -22,3 +22,30 @@ coder=Child()
 coder.farmering()
 coder.cooking()
 coder.coding()
+
+# Understanding Attributes in multiple Inheritance...
+
+class Father:
+    def __init__(self):
+        self.car="BMW"
+
+    def show_car(self):
+        print("Father's Car :",self.car)
+
+class Mother:
+    def __init__(self):
+        self.house="Big House"
+
+    def show_house(self):
+        print("Mother's House :",self.house)
+
+class Child(Father,Mother):
+    def __init__(self):
+        super().__init__()
+
+obj=Child()
+
+# Access Parent class properties...
+
+obj.show_car()
+obj.show_house()
