@@ -27,6 +27,7 @@ coder.coding()
 
 class Father:
     def __init__(self):
+        super().__init__()
         self.car="BMW"
 
     def show_car(self):
@@ -34,6 +35,7 @@ class Father:
 
 class Mother:
     def __init__(self):
+        super().__init__()
         self.house="Big House"
 
     def show_house(self):
