@@ -51,3 +51,26 @@ obj=Child()
 
 obj.show_car()
 obj.show_house()
+
+
+# Python MRO in Multiple Inheritance(MRO)
+
+class Father:
+    def show(self):
+        print("Father's Method")
+        super().show()
+
+class Mother:
+    def show(self):
+        print("Mother's Method")
+
+
+class Child(Father,Mother):
+    def show(self):
+        print("Child's Method")
+        super().show()
+
+# Create Object
+
+obj=Child()
+obj.show()
