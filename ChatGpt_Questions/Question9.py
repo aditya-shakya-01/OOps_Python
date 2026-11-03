@@ -1,0 +1,5 @@
+
+# Hybrid Inheritance
+
+class Person:
+    
