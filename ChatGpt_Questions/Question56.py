@@ -55,7 +55,7 @@ class BankAccount:
 acc=[BankAccount("Aditya Shakya",10000001,98000),BankAccount("Adi",10000002,55000)]
 for i in acc:
     print(i._acc_first)
-    if 10000001 in acc[1]:
+    if 10000001 in :
         print("yes")
     else:
         print("No")
