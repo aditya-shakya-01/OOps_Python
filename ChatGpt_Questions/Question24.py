@@ -15,7 +15,7 @@ class CSVProcessor(FileProcessor):
     def read_file(self):
         import csv
         with open("std.csv","r") as file:
-            data=list(csv.DictReader(file))
+            data=csv.DictReader(file)
             return data
            
             
