@@ -3,7 +3,8 @@
 
 from abc import ABC,abstractmethod
 class Account(ABC):
-    balance=100000
+    savings_balance=100000
+    current_balance=55000
         
     @ abstractmethod
     def deposit(self):
@@ -21,15 +22,15 @@ class SavingsAccount(Account):
         print("="*20)
         print("Savings Account")
         print("="*20)
-        self.balance+=amount
+        self.savings_balance+=amount
         return f"Your Deposit Amount is {amount}"
 
     def withdrawal(self,amount):
-        self.balance-=amount
+        self.savings_balance-=amount
         return f"Your Withdrawable Amount is {amount}"
 
     def calculate_interest(self):
-        return f"Your Total Balance With Interest :{(self.balance+self.balance*4/100)}" # 4% Per year Interest
+        return f"Your Total Balance With Interest :{(self.savings_balance+self.savings_balance*4/100)}" # 4% Per year Interest
 
 class CurrentAccount(Account):
     
@@ -37,15 +38,15 @@ class CurrentAccount(Account):
         print("="*20)
         print("Current Account")
         print("="*20)
-        self.balance+=amount
+        self.savings_balance+=amount
         return f"Your Deposit Amount is {amount}"
     
     def withdrawal(self,amount):
-        self.balance-=amount
+        self.savings_balance-=amount
         return f"Your Withdrawable Amount is {amount}"
     
     def calculate_interest(self):
-        return f"You must have use Bussiness Account balance {self.balance}. Your Account does not support Interest." 
+        return f"You must have use Bussiness Account balance {self.current_balance}. Your Account does not support Interest." 
 
 # Object Creation
 savings=SavingsAccount()

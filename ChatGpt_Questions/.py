@@ -1,23 +1,17 @@
-class BankAccount:
-    def __init__(self, name, balance):
+class Student:
+    school = "ABC College"
+
+    def __init__(self, name):
         self.name = name
-        self.__balance = balance
 
-    def deposit(self, amount):
-        self.__balance += amount
+    @classmethod
+    def change_school(cls, new_school):
+        cls.school = new_school
 
-        with open("transactions.txt", "a") as file:
-            file.write(f"{self.name} deposited {amount}\n")
+s1 = Student("Aditya")
+s2 = Student("Rahul")
 
-    def show_balance(self):
-        return self.__balance
+Student.change_school("XYZ College")
 
-    def show_history(self):
-        with open("transactions.txt", "r") as file:
-            print(file.read())
-
-
-account = BankAccount("Aditya", 5000)
-
-account.deposit(1000)
-account.show_history()
+print(s1.school)
+print(s2.school)
