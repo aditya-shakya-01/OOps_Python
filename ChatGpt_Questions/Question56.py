@@ -7,6 +7,9 @@ class BankAccount:
         self._acc_first=acc_first
         self.__balance=balance
         self.__pin=1001
+        import json
+        with open("data.json","w") as file:
+            data=json.dumps(self.name,self._acc_first,self.__balance)
 
     def deposit(self,amount):
         pin=int(input("Enter Your Pin :"))
@@ -53,9 +56,4 @@ class BankAccount:
 # Object Creation 
 
 acc=[BankAccount("Aditya Shakya",10000001,98000),BankAccount("Adi",10000002,55000)]
-for i in acc:
-    print(i._acc_first)
-    if 10000001 in :
-        print("yes")
-    else:
-        print("No")
+
