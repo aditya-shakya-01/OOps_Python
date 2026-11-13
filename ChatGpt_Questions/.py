@@ -8,11 +8,11 @@ class Bank:
     def __init__(self, form):
         self.form = form
         if self.form.initial_bal <= 100:
-            raise Exception("Your Initial Balance is Less Or Equal to 100...")
-        
+            raise ValueError("Your Initial Balance is Less Or Equal to 100...")
+
         Bank.account_number += 1
         self.account_numbers = Bank.account_number
-        
+
         # Save details to JSON whenever an account is successfully created
         self.save_to_json()
 
@@ -41,7 +41,9 @@ class Bank:
             try:
                 with open(filename, "r") as file:
                     data = json.load(file)
-            except Exception as data:
+                if not isinstance(data, list):
+                    data = []
+            except (json.JSONDecodeError, OSError):
                 data = []
         else:
             data = []
