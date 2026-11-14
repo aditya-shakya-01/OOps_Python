@@ -1,0 +1,65 @@
+[
+    {
+        "Bank Name": "State Bank Of India",
+        "Account Holder Name": "Krapansh",
+        "Account Number": 10003,
+        "Mobile Number": 9595959595,
+        "Aadhar Card Number": 323232323232,
+        "Initial Balance": 300,
+        "Atm Pin": 1212
+    },
+    {
+        "Bank Name": "State Bank Of India",
+        "Account Holder Name": "Aseesh",
+        "Account Number": 10004,
+        "Mobile Number": 1212121212,
+        "Aadhar Card Number": 989898989898,
+        "Initial Balance": 200,
+        "Atm Pin": 1212
+    },
+    {
+        "Bank Name": "State Bank Of India",
+        "Account Holder Name": "Pankaj",
+        "Account Number": 10005,
+        "Mobile Number": 3252525252,
+        "Aadhar Card Number": 111111111111,
+        "Initial Balance": 500,
+        "Atm Pin": 1212
+    },
+    {
+        "Bank Name": "State Bank Of India",
+        "Account Holder Name": "Abhinav",
+        "Account Number": 10002,
+        "Mobile Number": 9760402062,
+        "Aadhar Card Number": 101010101010,
+        "Initial Balance": 200,
+        "Atm Pin": 1212
+    },
+    {
+        "Bank Name": "State Bank Of India",
+        "Account Holder Name": "Krapansh",
+        "Account Number": 10003,
+        "Mobile Number": 9595959595,
+        "Aadhar Card Number": 323232323232,
+        "Initial Balance": 300,
+        "Atm Pin": 1212
+    },
+    {
+        "Bank Name": "State Bank Of India",
+        "Account Holder Name": "Aseesh",
+        "Account Number": 10004,
+        "Mobile Number": 1212121212,
+        "Aadhar Card Number": 989898989898,
+        "Initial Balance": 200,
+        "Atm Pin": 1212
+    },
+    {
+        "Bank Name": "State Bank Of India",
+        "Account Holder Name": "Pankaj",
+        "Account Number": 10005,
+        "Mobile Number": 3252525252,
+        "Aadhar Card Number": 111111111111,
+        "Initial Balance": 500,
+        "Atm Pin": 1212
+    }
+]

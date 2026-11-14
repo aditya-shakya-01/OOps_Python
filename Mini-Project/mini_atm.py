@@ -151,6 +151,9 @@ class UPI(Bank):
         else:
             print("Wrong Pin ! Please Try Again Later...")
 
+def Exit_Transaction():
+    print("Thanks for choices our services ! Have a nice day Sir...")
+
 # =================================
 #    Create a User Delete class
 # ================================
@@ -169,7 +172,18 @@ class Delete_Users(Bank):
             data=json.load(file)
             for row in data:
                 if holder_name == row.get("Account Holder Name") and account_number == row.get("Account Number"): # .get() returns the value from keys()
-                    
+                    if os.path.exists("Dlt_user.json"):
+                        try:
+                            with open("Dlt_user.json","r") as file:
+                                data=json.load(file)
+
+                        except Exception as data:
+                            data=[]
+
+                    else:
+                        data=[]
+                        
+
                     with open("Dlt_user.json","w") as file:
                         json.dump(row,file,indent=4)
                                 
@@ -207,7 +221,8 @@ form=[
     Form("Aditya Shakya",9627209265,967475171054,100,1212),
     Form("Abhinav",9760402062,101010101010,200,1212),
     Form("Krapansh",9595959595,323232323232,300,1212),
-    Form("Aseesh",1212121212,989898989898,200,1212)
+    Form("Aseesh",1212121212,989898989898,200,1212),
+    Form("Pankaj",3252525252,111111111111,500,1212)
     ]
 
 for form_data in form:
@@ -216,8 +231,7 @@ for form_data in form:
 
 
 
-# atm=ATM(form[2])
-# atm.check_balance()
+
 
 while True:
     print("="*30)
@@ -232,17 +246,41 @@ while True:
         pass
 
     if n==2:
-        pass
+        while True:
+            print("Press 1 to Transaction From ATM...")
+            print("Press 2 to Tansaction From UPI...")
+            print("Press 3 to Exit ...")
+
+            n=int(input("Enter Your Choice..."))
+
+            if n==1:
+                # ATM Transaction
+                atm=ATM(form[2])
+                atm.check_balance()
+                break
+
+            if n==2:
+                # UPI Transaction
+                upi=UPI(form[2])
+                upi.deposit()
+                break
+
+            if n==3:
+                # Exit
+                Exit_Transaction()
+                break
     
     if n==3:
         for form_data in form:
             bank=Bank(form_data)
             bank.user_detalis()
+            
             # here some correction data shown by updated json file
 
     if n==4:
         dlt=Delete_Users(form)
         dlt.user_dlt()
+        
 
     if n==5:
         Exit()
