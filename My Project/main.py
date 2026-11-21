@@ -1,5 +1,4 @@
+from bank.cli import run
 
-from pybank.cli import run
-
-if __name__ == "__main__":
+if __name__==__main__:
     run()

@@ -31,7 +31,7 @@
 class Father:
     def show(self):
         print("This is Father Class")
-        super().show()
+        # super().show()
 
 class Mother:
     def show(self):
@@ -40,9 +40,10 @@ class Mother:
 
 class Child(Father,Mother):
     def show(self):
+        
         print("This is Child class")
         super().show()
 
 obj=Child()
-
+print(Child.__mro__)
 obj.show()
